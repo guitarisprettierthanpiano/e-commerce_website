@@ -76,6 +76,7 @@ for (let i = 0; i < myCarts.length; i++){
     //////////////////////////////////////////////////////
     
     /*CANCEL THE PRODUCT IMAGE FOR NOW. NO ROOM
+
     //the product image
     let imgCheckout = document.createElement('span');
     imgCheckout.innerText = 'no image';
