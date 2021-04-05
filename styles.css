@@ -6,6 +6,9 @@ body{
 
     font-family: Arial, Helvetica, sans-serif;
 
+    /*this gradient is based from
+    https://projects.verou.me/css3patterns/#cross
+    i wanted it kind of inverted color wise. */
     background:
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent),
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
@@ -27,7 +30,7 @@ body{
 /* HEADER SECTION */
 header{
     grid-row: 1;
-    background-color: rgba(0, 0, 0, 0.89);
+    background-color: rgba(24, 24, 24, 0.952);
 
     position: fixed;
     width: 100%;
@@ -216,7 +219,8 @@ td button{
 footer{
     display: grid;
     grid-row: 4;
-    background-color: aquamarine;
+    background-color: rgb(181, 227, 255);
+
 }
 
 footer span{
