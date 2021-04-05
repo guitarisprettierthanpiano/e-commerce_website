@@ -6,14 +6,13 @@ body{
 
     font-family: Arial, Helvetica, sans-serif;
 
-    background: radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 80%, transparent 80%, transparent) repeat scroll 0% 0% / 100px 100px, radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 80%, transparent 80%, transparent) repeat scroll 50px 50px / 100px 100px, 
-    linear-gradient(rgb(168, 177, 187) 8px, transparent 8px) repeat scroll 0px -4px / 50px 50px, rgb(98, 139, 184) 
-    linear-gradient(90deg, rgba(165, 207, 255, 0.5) 8px, transparent 8px) repeat scroll -4px 0px / 50px 50px; 
-    
-    --darkreader-inline-bgimage:
-    radial-gradient(circle, rgba(0, 0, 0, 0) 20%, #596673 20%, #596673 80%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0)), 
-    radial-gradient(circle, rgba(0, 0, 0, 0) 20%, #596673 20%, #596673 80%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0)), linear-gradient(#3f4851 8px, rgba(0, 0, 0, 0) 8px), linear-gradient(90deg, #3f4851 8px, rgba(0, 0, 0, 0) 8px); 
-    --darkreader-inline-bgcolor:#596673;
+    background:
+    radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(#a8b1bb52 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #a8b1bb2d 8px, transparent 8px) -4px 0;
+    background-color: rgb(255, 255, 255);
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
 }
 .container{
     margin: 0px;
