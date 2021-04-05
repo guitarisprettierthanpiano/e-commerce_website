@@ -1,0 +1,226 @@
+/* */
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:antiquewhite;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 80%, transparent 80%, transparent) repeat scroll 0% 0% / 100px 100px, radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 80%, rgb(255, 255, 255) 80%, transparent 80%, transparent) repeat scroll 50px 50px / 100px 100px, 
+    linear-gradient(rgb(168, 177, 187) 8px, transparent 8px) repeat scroll 0px -4px / 50px 50px, rgb(98, 139, 184) 
+    linear-gradient(90deg, rgba(165, 207, 255, 0.5) 8px, transparent 8px) repeat scroll -4px 0px / 50px 50px; 
+    
+    --darkreader-inline-bgimage:
+    radial-gradient(circle, rgba(0, 0, 0, 0) 20%, #596673 20%, #596673 80%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0)), 
+    radial-gradient(circle, rgba(0, 0, 0, 0) 20%, #596673 20%, #596673 80%, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0)), linear-gradient(#3f4851 8px, rgba(0, 0, 0, 0) 8px), linear-gradient(90deg, #3f4851 8px, rgba(0, 0, 0, 0) 8px); 
+    --darkreader-inline-bgcolor:#596673;
+}
+.container{
+    margin: 0px;
+    padding: 0px;
+
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr 20px;
+}
+
+/* HEADER SECTION */
+header{
+    grid-row: 1;
+    background-color: rgba(0, 0, 0, 0.89);
+
+    position: fixed;
+    width: 100%;
+
+    z-index: 2;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+h1{
+    grid-column: 1;
+    grid-row: 1;
+
+    color: rgb(228, 228, 228);
+}
+ul{
+    grid-column: 2;
+    grid-row: 1;
+
+    justify-content: end;
+    align-content: center;
+
+    padding: 0px 12px;
+}
+
+li{
+    display: inline;
+    font-size: 36px;
+    
+}
+button{
+    height: 50px;
+    width: 100px;
+
+    font-size: 16px;
+    float:right;
+}
+
+#hide_probably{
+    display: none;
+}
+.image a {
+    font-size: 28px;
+}
+
+/* MAIN SECTION */
+main{
+    display: grid;
+    grid-row: 3;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    padding: 6px;
+}
+
+.image{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+
+    margin: 10px; /*margin between each image*/
+}
+
+.image * {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+#rain_coat{
+    margin-right: 0px;
+}
+
+.add_to_cart{
+    margin: -83px 12px;
+    background-color:rgba(189, 183, 107, 0.651);
+    transition: all .1s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+
+    font-size: 30px;
+
+    height: 40px;
+    width: 150px;
+}
+
+.image:hover .add_to_cart{
+    opacity: 1;
+    text-decoration: none;
+}
+
+/* ASIDE SECTION */
+aside {
+    grid-row: 2;
+    
+    display: flex;
+    justify-content: center;
+
+    background-color:rgba(193, 240, 140, 0.788);
+    
+  }
+
+.dropdown{
+    top: 100px;
+    
+    position: fixed;
+
+}
+.overlay_container{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: end;
+    
+    max-height: 550px;
+    overflow-y: auto;
+
+    background-color: rgba(0, 0, 0, 0.884);
+
+}
+#close_btn{
+    grid-row: 1;
+    grid-column: 2;
+    background-color: darkred;
+
+    height: 32px;
+    width: 32px;
+
+}
+.table{
+    grid-row: 2;
+    grid-column: 1 / span 2;
+
+    width: 600px;
+    background-color: rgba(0, 195, 255, 0.568);
+}
+
+table, th, td, caption {
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    width: 400px;
+}
+td button{
+    height: 16px;
+    width: 16px;
+    
+}
+#clear_cart{
+    grid-row: 3 / span 4;
+    grid-column: 1;
+
+    align-self: center;
+    justify-self: start;
+    margin: 0px 17px;
+    
+
+}
+#price_total_checkout{
+    grid-row: 3;
+    grid-column: 2;
+
+    align-items: center;
+    float: right;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+#purchase_button{
+    grid-row: 4;
+    grid-column: 2;
+    
+}
+#empty_span{
+    background-color: darkgreen;
+    grid-row: 4;
+    grid-column: 1;
+}
+
+
+/* FOOTER SECTION */
+footer{
+    display: grid;
+    grid-row: 4;
+    background-color: aquamarine;
+}
+
+footer span{
+    text-align: center;
+}
+

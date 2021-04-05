@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- Write your comments here -->
+<html lang='en'>
+<head>
+    <title>Buy Somethings</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='styles.css'>
+</head>
+
+<body>
+
+<div class='container'>
+    <header>
+        <nav>
+            <h1>Steven's Clothes Shop</h1>
+            <ul>
+
+                <li>
+                    <button><span id='num_in_cart'>0</span></button>
+                </li>
+                <li id='hide_probably'>
+                    <button><span id='price_total'>&#36;0.00</span></button>
+                </li>
+
+                <li>
+                    <button type='button' id='cart_btn'><i class="fa fa-shopping-cart fa-1x"></i></button>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+    
+    <main>
+        <div class='image'>
+            <img src='images/blacktshirt.png'>
+            <h3>Black T-Shirt</h3>
+            <h3 class='item_price'>$20.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/bluetshirt.png'>
+            <h3>Blue T-Shirt</h3>
+            <h3 class='item_price'>$21.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/graytshirt.png'>
+            <h3>Gray T-Shirt</h3>
+            <h3 class='item_price'>$22.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/salmontshirt.png'>
+            <h3>Salmon T-Shirt</h3>
+            <h3 class='item_price'>$23.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/blackhoodie.png'>
+            <h3>Black Hoodie</h3>
+            <h3 class='item_price'>$24.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/leatherjacket.png'>
+            <h3>Leather Jacket</h3>
+            <h3 class='item_price'>$25.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img id='raincoat' src='images/raincoat.png'>
+            <h3>Sports Jersey</h3>
+            <h3 class='item_price'>$26.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/redhoodie.png'>
+            <h3>Red Hoodie</h3>
+            <h3 class='item_price'>$27.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/jeans.png'>
+            <h3>Jeans</h3>
+            <h3 class='item_price'>$28.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/tornjeans.png'>
+            <h3>Ripped Jeans</h3>
+            <h3 class='item_price'>$29.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/trousers.png'>
+            <h3>Gray Trousers</h3>
+            <h3 class='item_price'>$30.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/cowboy.png'>
+            <h3>Cowboy Hat</h3>
+            <h3 class='item_price'>$31.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/sneakers.png'>
+            <h3>Sneakers</h3>
+            <h3 class='item_price'>$32.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/cowboyboots.png'>
+            <h3>Cowboy Boots</h3>
+            <h3 class='item_price'>$34.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/orangejacket.png'>
+            <h3>Orange Jacket</h3>
+            <h3 class='item_price'>$33.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+        <div class='image'>
+            <img src='images/reddress.png'>
+            <h3>Pink Blazer</h3>
+            <h3 class='item_price'>$35.00</h3>
+            <a href="#" onclick="return false;" class='add_to_cart'>Add to Cart</a>
+            <input type='hidden'>
+        </div>
+
+    </main>
+
+
+    
+    <aside>
+        <div class='dropdown' style='display: none;'>
+        <div class='overlay_container'>
+            <button id='close_btn'>X</button>
+            <table id='cart_table' class='table'>
+                <caption>Your Shopping Cart</caption>
+                <thead>
+                    <tr>
+                        <th class='xth' colspan="3">Item</th>
+                        <th style='width: 10px;' class='priceth'>Price</th>
+                    </tr>
+                </thead>
+            <br>
+                <tbody id='table_body'></tbody>
+            </table>
+            <button id='clear_cart'>Clear Cart</button>
+            <button id='purchase_button'>PURCHASE</button>
+            <span id='price_total_checkout'>$0.00</span>
+            <span id='empty_span'></span>
+        </div>
+        </div>
+    </aside>
+
+
+    <footer>
+        <span>Designed and Created by Steven Fabrizio 2021</span>
+    </footer>
+</div>
+<script src='scripts.js' defer></script>
+</body>
+</html>
