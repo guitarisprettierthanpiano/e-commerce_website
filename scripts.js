@@ -74,13 +74,15 @@ for (let i = 0; i < myCarts.length; i++){
     //FILLING TABLE ENTRIES WITH THE PRODUCT INFORMATION//
     //////////////////////////////////////////////////////
     //////////////////////////////////////////////////////
+    
+    /*CANCEL THE PRODUCT IMAGE FOR NOW. NO ROOM
     //the product image
     let imgCheckout = document.createElement('span');
     imgCheckout.innerText = 'no image';
     tempTableData = document.createElement('td');
     tempTableData.appendChild(imgCheckout);
     tempTableRow.appendChild(tempTableData);
-
+    */
 
     // the name of the product
     let nameCheckout = document.createElement('span');
