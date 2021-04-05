@@ -172,6 +172,8 @@ document.getElementById('purchase_button').addEventListener('click', function(){
     //resetting the number of items in cart to 0.
     document.getElementById('num_in_cart').innerText = 0;
 
+    //close the window and give alert
+    checkoutToggle.style.display = 'none';
     alert('Thank you for your order.')
 })
 

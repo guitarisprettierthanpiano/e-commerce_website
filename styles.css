@@ -1,14 +1,15 @@
-/* */
 body{
     margin: 0px;
     padding: 0px;
     background-color:antiquewhite;
 
+    /* i don't know much about fonts but internet says this is the safest font family. */
     font-family: Arial, Helvetica, sans-serif;
+    color: rgba(0, 0, 0, 0.897);
 
-    /*this gradient is based from
+    /*this gradient is from
     https://projects.verou.me/css3patterns/#cross
-    i wanted it kind of inverted color wise. */
+    i wanted it sort of inverted color wise. */
     background:
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent),
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
@@ -71,6 +72,7 @@ header * button{
 }
 #hide_probably{
     display: none;
+    /*hiding the total price in the nav for now.*/
 }
 .image a {
     font-size: 28px;
@@ -115,7 +117,7 @@ main{
     text-decoration: none;
 }
 
-/* TOGGLE SHOPPING CART OVERLAY */
+/* SHOPPING CART OVERLAY */
 aside {
     grid-row: 2;
     
@@ -124,8 +126,7 @@ aside {
 
     background-color:rgba(193, 240, 140, 0.788);
     
-  }
-
+}
 .dropdown{
     top: 100px;
 
@@ -141,15 +142,9 @@ aside {
     max-height: 550px;
     overflow-y: auto;
 
-    background:
-    radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent),
-    radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
-    linear-gradient(#a8b1bb52 8px, transparent 8px) 0 -4px,
-    linear-gradient(90deg, #a8b1bb2d 8px, transparent 8px) -4px 0;
-    background-color: rgb(255, 255, 255);
-    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+    background-image: url('images/cartgif.gif');
 
-    border: 3px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.842);
 
 }
 #close_btn{
@@ -166,16 +161,20 @@ aside {
     grid-column: 1 / span 4;
 
     width: 310px;
+
+    align-items: center;
 }
 table, th, td, caption {
     font-size: 20px;
     text-align: center;
 }
-
 td button{
-    height: 32px;
-    width: 40px;
+    display: flex;
+    height: 24px;
+    width: 24px;
+    text-align: center;
 
+    align-content: center;
 }
 .removeth{
     width: 45px;
@@ -203,6 +202,8 @@ td button{
     float: right;
     font-size: 24px;
     font-weight: 700;
+
+    border-top: 3px solid black;
 }
 #purchase_button{
     grid-row: 4;
@@ -214,12 +215,12 @@ td button{
     grid-row: 4;
     grid-column: 1;
 }
+
 /* FOOTER SECTION */
 footer{
     display: grid;
     grid-row: 4;
     background-color: rgb(181, 227, 255);
-
 }
 footer span{
     text-align: center;
