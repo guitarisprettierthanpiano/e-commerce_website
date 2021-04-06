@@ -29,7 +29,7 @@ button{
     text-transform: uppercase;
 }
 *{
-    color: rgb(20, 20, 20);
+    color: rgba(0, 0, 0, 0.89);
     text-shadow: 1px 1px #ffffff7c;
 }
 
@@ -46,8 +46,6 @@ header{
 nav{
     display: grid;
     grid-template-columns: 1fr 40px;
-    grid-template-rows: 1fr;
-
     
     z-index: 3;
 }
@@ -98,7 +96,6 @@ header * button{
     cursor: pointer;
 }
 header * button:hover{
-    
     transition: all .05s ease-in-out;
     transform: scale(1.05);
 }
@@ -108,11 +105,10 @@ header * button:active{
 }
 #hide_probably{
     display: none;
-    /*i originally had a price total showing on the nav bar but am hiding it for now. might re-enable it*/
+    /*hiding this for now.*/
 }
 .image a {
     font-size: 28px;
-
 }
 
 /* MAIN SECTION */

@@ -1,5 +1,15 @@
 /*
-the buttons and tables for this webpage are created below. The initial prices of the items are in the InnerText attributes of tag elements in the html. Calculations are done with parseInt via click listeners. Some of this data is put into created table rows and table data cells.
+The buttons and tables for this webpage are created below. 
+
+The initial prices of the items are in the InnerText attributes of tag elements in the html. 
+
+Calculations are done with parseInt via click listeners. Some of this data is put into created table rows and table data cells.
+
+The Purchase button will reset the money values to zero and close the cart window.
+
+I may return to add some javascript effects to some parts of the web page.
+
+Steven
 */
 
 
@@ -80,8 +90,7 @@ for (let i = 0; i < myCarts.length; i++){
     //////////////////////////////////////////////////////
     //////////////////////////////////////////////////////
     
-    /*CANCEL THE PRODUCT IMAGE FOR NOW. NO ROOM
-
+    /*CANCEL THE PRODUCT IMAGE FOR NOW. 
     //the product image
     let imgCheckout = document.createElement('span');
     imgCheckout.innerText = 'no image';
