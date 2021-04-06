@@ -1,3 +1,8 @@
+/*
+the buttons and tables for this webpage are created below. The initial prices of the items are in the InnerText attributes of tag elements in the html. Calculations are done with parseInt via click listeners. Some of this data is put into created table rows and table data cells.
+*/
+
+
 /////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////
 //setting up event listener for clicking Add to Cart for every item
