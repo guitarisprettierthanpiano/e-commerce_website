@@ -1,3 +1,4 @@
+/* GENERAL STYLINGS */
 body{
     margin: 0px;
     padding: 0px;
@@ -25,7 +26,10 @@ body{
     grid-gap: 10px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 60px auto 1fr 20px;
+    grid-template-rows: auto auto auto 20px;
+}
+button{
+    text-transform: uppercase;
 }
 
 /* HEADER SECTION */
@@ -40,14 +44,21 @@ header{
 }
 nav{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 40px;
     grid-template-rows: 1fr;
 }
 h1{
     grid-column: 1;
     grid-row: 1;
+    padding-left: 24px;
+
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
 
     color: rgb(228, 228, 228);
+    
 }
 ul{
     grid-column: 2;
@@ -56,7 +67,7 @@ ul{
     justify-content: end;
     align-content: center;
 
-    padding: 0px 12px;
+    padding: 0px 18px;
 }
 li{
     display: inline;
@@ -92,6 +103,8 @@ main{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
+    margin-top: 60px;
+    margin-bottom: 40px;
     padding: 6px;
 }
 .image{
@@ -108,15 +121,18 @@ main{
 }
 .add_to_cart{
     margin: -83px 12px;
-    background-color:rgba(255, 255, 255, 0.575);
-    transition: all .1s ease-in-out;
+    background-color:rgba(41, 41, 41, 0.575);
+    color: cornsilk;
+
+    transition: all .05s ease-in-out;
     opacity: 0;
     cursor: pointer;
 
-    font-size: 30px;
 
     height: 40px;
     width: 150px;
+
+    text-align: center;
 }
 .image:hover .add_to_cart{
     opacity: 1;
@@ -135,7 +151,6 @@ aside {
 }
 .dropdown{
     top: 100px;
-
     position: fixed;
 }
 .overlay_container{
@@ -145,13 +160,16 @@ aside {
 
     justify-items: end;
     
-    max-height: 550px;
-    width: 330px; /*this one added */
+    max-height: 520px;
+    width: 325px; /*this one added */
     overflow-y: auto;
 
     background-image: url('images/cartgif.gif');
 
-    border: 2px solid rgba(0, 0, 0, 0.842);
+    border: 2px double rgba(0, 0, 0, 0.842);
+
+    padding:6px;
+    
 }
 #close_btn{
     grid-row: 1;
@@ -160,7 +178,6 @@ aside {
 
     height: 32px;
     width: 32px;
-
 }
 .table{
     grid-row: 2;
@@ -191,11 +208,18 @@ td button{
     border-bottom: 3px solid black;
 }
 #clear_cart{
-    grid-row: 3;
+    grid-row: 4;
     grid-column: 1;
 
     align-self: center;
     justify-self: start;
+
+    margin-bottom: 3px;
+    margin-right: 3px;
+
+    height: 40px;
+    width: 80px;
+    
 
 }
 #price_total_checkout{
@@ -212,6 +236,12 @@ td button{
 #purchase_button{
     grid-row: 4;
     grid-column: 2;
+
+    margin-bottom: 3px;
+    margin-right: 3px;
+
+    height: 40px;
+    width: 80px;
     
 }
 #empty_span{
@@ -224,7 +254,7 @@ td button{
 footer{
     display: grid;
     grid-row: 4;
-    background-color: rgb(181, 227, 255);
+    background-color: rgba(85, 85, 85, 0.178);
 }
 footer span{
     text-align: center;
