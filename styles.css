@@ -7,9 +7,8 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 0.897);
 
-    /*this gradient is from
-    https://projects.verou.me/css3patterns/#cross
-    i wanted it sort of inverted color wise. */
+    /*this gradient is based off of
+    https://projects.verou.me/css3patterns/#cross*/
     background:
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent),
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
@@ -22,10 +21,9 @@ body{
     margin: 0px;
     padding: 0px;
 
-    grid-gap: 10px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 20px;
+    grid-template-rows: repeat(3, auto) 20px;
 }
 button{
     text-transform: uppercase;
@@ -34,6 +32,7 @@ button{
     color: rgb(20, 20, 20);
     text-shadow: 1px 1px #ffffff7c;
 }
+
 /* HEADER SECTION */
 header{
     grid-row: 1;
@@ -126,7 +125,6 @@ main{
 
     margin-top: 60px;
     margin-bottom: 20px;
-    padding: 6px;
 }
 .image{
     display: grid;
@@ -180,7 +178,6 @@ img:hover{
     border-radius: 50%;
 
     z-index: 0;
-
 }
 
 /* SHOPPING CART OVERLAY */
@@ -314,7 +311,6 @@ td button{
     grid-row: 4;
     grid-column: 2;
 
-
     height: 50px;
     width: 100px;
     
@@ -347,8 +343,6 @@ footer{
     border-radius: 2px;
 }
 
-
-/* RESPONSIVE DESIGNS */
 /* ipad size */
 @media screen and (max-width: 1025px) {
     main {
@@ -359,7 +353,6 @@ footer{
 
         margin-top: 60px;
         margin-bottom: 20px;
-        padding: 6px;
     }
     h1{
         grid-column: 1;
@@ -428,7 +421,6 @@ footer{
 
         margin-top: 60px;
         margin-bottom: 20px;
-        padding: 6px;
     }
     h1{
         grid-column: 1;
@@ -465,7 +457,7 @@ footer{
     }
     .overlay_container{
         display: grid;
-        grid-template-rows: auto auto auto auto;
+        grid-template-rows: repeat(4, auto);
         grid-template-columns: 1fr 1fr;
     
         justify-items: end;
