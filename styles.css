@@ -31,6 +31,10 @@ body{
 button{
     text-transform: uppercase;
 }
+*{
+    color: rgb(20, 20, 20);
+    text-shadow: 1px 1px #b8b8b8d3;
+}
 
 /* HEADER SECTION */
 header{
@@ -40,12 +44,15 @@ header{
     position: fixed;
     width: 100%;
 
-    z-index: 2;
+    z-index: 3;
 }
 nav{
     display: grid;
     grid-template-columns: 1fr 40px;
     grid-template-rows: 1fr;
+
+    
+    z-index: 3;
 }
 h1{
     grid-column: 1;
@@ -71,8 +78,6 @@ ul{
 }
 li{
     display: inline;
-    font-size: 36px;
-    
 }
 header * button{
     height: 50px;
@@ -86,13 +91,29 @@ header * button{
 
     justify-items: center;
     align-items: center;
+
+    border-radius: 50%;
+
+    background-image: url('images/cartgif.gif');
+    
+    cursor: pointer;
+}
+header * button:hover{
+    
+    transition: all .05s ease-in-out;
+    transform: scale(1.05);
+}
+header * button:active{
+    transition: all .05s ease-in-out;
+    transform: translateY(2px);
 }
 #hide_probably{
     display: none;
-    /*hiding the total price in the nav for now.*/
+    /*i originally had a price total showing on the nav bar but am hiding it for now. might re-enable it*/
 }
 .image a {
     font-size: 28px;
+
 }
 
 /* MAIN SECTION */
@@ -120,23 +141,41 @@ main{
     margin: 0px;
 }
 .add_to_cart{
-    margin: -83px 12px;
-    background-color:rgba(41, 41, 41, 0.575);
-    color: cornsilk;
+    margin: -83px 10px;
+    background-color:rgba(0, 0, 0, 0.829);
+    color: rgba(255, 255, 255, 0.904);
 
     transition: all .05s ease-in-out;
     opacity: 0;
     cursor: pointer;
 
+    text-decoration: none;
 
     height: 40px;
-    width: 150px;
+    width: 160px;
+    border-radius: 50%;
 
     text-align: center;
+
+    z-index: 2;
+}
+.add_to_cart:active{
+    transform: translateY(1px);
+}
+h3{
+    z-index: 1;
 }
 .image:hover .add_to_cart{
     opacity: 1;
-    text-decoration: none;
+}
+img:hover{
+    transition: all .05s ease-in-out;
+    transform: scale(1.20);
+
+    background-color: rgba(170, 170, 170, 0.541);
+    border-radius: 50%;
+
+    z-index: 0;
 }
 
 /* SHOPPING CART OVERLAY */
@@ -146,12 +185,14 @@ aside {
     display: flex;
     justify-content: center;
 
-    background-color:rgba(193, 240, 140, 0.788);
+    z-index: 3;
     
 }
 .dropdown{
     top: 100px;
     position: fixed;
+    z-index: 3;
+    
 }
 .overlay_container{
     display: grid;
@@ -170,6 +211,8 @@ aside {
 
     padding:6px;
     
+    z-index: 3;
+    
 }
 #close_btn{
     grid-row: 1;
@@ -178,6 +221,9 @@ aside {
 
     height: 32px;
     width: 32px;
+
+    z-index: 3;
+    
 }
 .table{
     grid-row: 2;
@@ -188,6 +234,9 @@ aside {
 table, th, td, caption {
     font-size: 20px;
     text-align: center;
+    font-weight: 700;
+
+    z-index: 4;
 }
 td button{
     display: flex;
@@ -214,12 +263,11 @@ td button{
     align-self: center;
     justify-self: start;
 
-    margin-bottom: 3px;
-    margin-right: 3px;
 
-    height: 40px;
-    width: 80px;
+    height: 50px;
+    width: 100px;
     
+    font-weight: 700;
 
 }
 #price_total_checkout{
@@ -237,12 +285,11 @@ td button{
     grid-row: 4;
     grid-column: 2;
 
-    margin-bottom: 3px;
-    margin-right: 3px;
 
-    height: 40px;
-    width: 80px;
+    height: 50px;
+    width: 100px;
     
+    font-weight: 700;
 }
 #empty_span{
     background-color: darkgreen;
@@ -255,7 +302,5 @@ footer{
     display: grid;
     grid-row: 4;
     background-color: rgba(85, 85, 85, 0.178);
-}
-footer span{
     text-align: center;
 }
