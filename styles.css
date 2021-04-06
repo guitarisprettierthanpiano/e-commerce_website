@@ -4,7 +4,6 @@ body{
     padding: 0px;
     background-color:antiquewhite;
 
-    /* i don't know much about fonts but internet says this is the safest font family. */
     font-family: Arial, Helvetica, sans-serif;
     color: rgba(0, 0, 0, 0.897);
 
@@ -122,8 +121,8 @@ main{
     display: grid;
     grid-row: 3;
 
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
 
     margin-top: 60px;
     margin-bottom: 20px;
@@ -134,7 +133,7 @@ main{
     justify-content: center;
     align-content: center;
 
-    margin: 20px; /*margin between each image*/
+    margin: 20px;
 }
 .image * {
     text-align: center;
@@ -171,7 +170,7 @@ h3{
     z-index: 1;
 }
 .image:hover .add_to_cart{
-    opacity: 1;
+    opacity: .9;
 }
 img:hover{
     transition: all .05s ease-in-out;
@@ -327,7 +326,6 @@ td button{
     border-radius: 10%;
 }
 #empty_span{
-    background-color: darkgreen;
     grid-row: 4;
     grid-column: 1;
 }
