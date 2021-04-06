@@ -31,7 +31,7 @@ body{
 /* HEADER SECTION */
 header{
     grid-row: 1;
-    background-color: rgba(24, 24, 24, 0.952);
+    background-color: rgb(34, 34, 34);
 
     position: fixed;
     width: 100%;
@@ -69,6 +69,12 @@ header * button{
 
     font-size: 30px;
     float:right;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+    align-items: center;
 }
 #hide_probably{
     display: none;
@@ -140,12 +146,12 @@ aside {
     justify-items: end;
     
     max-height: 550px;
+    width: 330px; /*this one added */
     overflow-y: auto;
 
     background-image: url('images/cartgif.gif');
 
     border: 2px solid rgba(0, 0, 0, 0.842);
-
 }
 #close_btn{
     grid-row: 1;
@@ -161,8 +167,6 @@ aside {
     grid-column: 1 / span 4;
 
     width: 310px;
-
-    align-items: center;
 }
 table, th, td, caption {
     font-size: 20px;
@@ -170,10 +174,10 @@ table, th, td, caption {
 }
 td button{
     display: flex;
-    height: 24px;
-    width: 24px;
+    height: 28px;
+    width: 28px;
     text-align: center;
-
+    text-justify:auto;
     align-content: center;
 }
 .removeth{
