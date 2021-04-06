@@ -16,7 +16,7 @@ body{
     radial-gradient(circle, transparent 20%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, transparent 80%, transparent) 50px 50px,
     linear-gradient(#a8b1bb52 8px, transparent 8px) 0 -4px,
     linear-gradient(90deg, #a8b1bb2d 8px, transparent 8px) -4px 0;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.884);
     background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
 }
 .container{
@@ -33,8 +33,17 @@ button{
 }
 *{
     color: rgb(20, 20, 20);
-    text-shadow: 1px 1px #b8b8b8d3;
+    text-shadow: 1px 1px #ffffff7c;
 }
+
+/*
+    align-items: center; 
+    align-self: center;
+    align-content: center;
+    justify-items: center;
+    justify-self: center;
+    justify-content: center;
+*/
 
 /* HEADER SECTION */
 header{
@@ -63,8 +72,10 @@ h1{
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
+    
+    align-self: center;
 
-    color: rgb(228, 228, 228);
+    color: rgba(255, 255, 255, 0.932);
     
 }
 ul{
@@ -125,7 +136,7 @@ main{
     grid-template-rows: 1fr 1fr 1fr 1fr;
 
     margin-top: 60px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding: 6px;
 }
 .image{
@@ -133,16 +144,20 @@ main{
     justify-content: center;
     align-content: center;
 
-    margin: 10px; /*margin between each image*/
+    margin: 20px; /*margin between each image*/
 }
 .image * {
     text-align: center;
     padding: 0px;
     margin: 0px;
 }
+.image img{
+    margin-bottom: 14px;
+    max-width: 100%;
+}
 .add_to_cart{
     margin: -83px 10px;
-    background-color:rgba(0, 0, 0, 0.829);
+    background-color:rgba(0, 0, 0, 0.925);
     color: rgba(255, 255, 255, 0.904);
 
     transition: all .05s ease-in-out;
@@ -176,6 +191,7 @@ img:hover{
     border-radius: 50%;
 
     z-index: 0;
+
 }
 
 /* SHOPPING CART OVERLAY */
@@ -202,12 +218,13 @@ aside {
     justify-items: end;
     
     max-height: 520px;
-    width: 325px; /*this one added */
+    width: 325px;
     overflow-y: auto;
 
     background-image: url('images/cartgif.gif');
 
     border: 2px double rgba(0, 0, 0, 0.842);
+    border-radius: 2%;
 
     padding:6px;
     
@@ -217,12 +234,20 @@ aside {
 #close_btn{
     grid-row: 1;
     grid-column: 2;
+
     background-color: darkred;
+
+    color: rgba(255, 255, 255, 0.842);
+    font-weight: 700;
+    font-size: 16px;
 
     height: 32px;
     width: 32px;
 
+    border-radius: 10%;
+
     z-index: 3;
+    cursor: pointer;
     
 }
 .table{
@@ -239,12 +264,20 @@ table, th, td, caption {
     z-index: 4;
 }
 td button{
-    display: flex;
-    height: 28px;
-    width: 28px;
-    text-align: center;
-    text-justify:auto;
-    align-content: center;
+    height: 32px;
+    width: 32px;
+
+    display: grid;
+    align-items: center;
+    justify-items: center; 
+
+    font-size: 16px;
+    font-weight: 700;
+
+    background-color:rgba(211, 211, 211, 0.829);
+
+    cursor: pointer;
+    border-radius: 10%;
 }
 .removeth{
     width: 45px;
@@ -269,6 +302,11 @@ td button{
     
     font-weight: 700;
 
+    background-color:rgba(211, 211, 211, 0.829);
+
+    cursor: pointer;
+    border-radius: 10%;
+
 }
 #price_total_checkout{
     grid-row: 3;
@@ -276,6 +314,8 @@ td button{
 
     align-items: center;
     float: right;
+    margin-right: 1px;
+
     font-size: 24px;
     font-weight: 700;
 
@@ -290,17 +330,189 @@ td button{
     width: 100px;
     
     font-weight: 700;
+
+    background-color:rgba(211, 211, 211, 0.829);
+
+    cursor: pointer;
+    border-radius: 10%;
 }
 #empty_span{
     background-color: darkgreen;
     grid-row: 4;
     grid-column: 1;
 }
+.overlay_container button:active{
+    transition: all .05s ease-in-out;
+    transform: translateY(1px);
+}
 
 /* FOOTER SECTION */
 footer{
     display: grid;
     grid-row: 4;
+
     background-color: rgba(85, 85, 85, 0.178);
+
     text-align: center;
+
+    border-top: double 2px rgba(0, 0, 0, 0.767);
+    border-radius: 2px;
+}
+
+/* RESPONSIVE DESIGNS */
+/* ipad size */
+@media screen and (max-width: 1025px) {
+    main {
+        display: grid;
+        grid-row: 3;
+
+        grid-template-columns: 1fr 1fr;
+
+        margin-top: 60px;
+        margin-bottom: 20px;
+        padding: 6px;
+    }
+    h1{
+        grid-column: 1;
+        grid-row: 1;
+        padding-left: 12px;
+
+        font-style: italic;
+        font-size: 28px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        color: rgba(255, 255, 255, 0.932);
+
+        align-self: center;
+    }
+    header * button{
+        height: 50px;
+        width: 100px;
+    
+        font-size: 30px;
+        float:right;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+        justify-items: center;
+        align-items: center;
+    
+        border-radius: 50%;
+    
+        background-image: none;
+        
+        cursor: pointer;
+    }
+    .add_to_cart{
+        margin: -84px 50px;
+        background-color:rgba(0, 0, 0, 0.699);
+        color: rgba(255, 255, 255, 0.904);
+    
+        transition: all .05s ease-in-out;
+        opacity: 1;
+        cursor: pointer;
+    
+        text-decoration: none;
+    
+        height: 20px;
+        width: 80px;
+        border-radius: 50%;
+    
+        text-align: center;
+    
+        z-index: 2;
+    }
+    .image a{
+        font-size: 12px;
+    }
+}
+
+/*mobile phone size*/
+@media screen and (max-width: 415px) {
+    main {
+        display: grid;
+        grid-row: 3;
+
+        grid-template-columns: 1fr;
+
+        margin-top: 60px;
+        margin-bottom: 20px;
+        padding: 6px;
+    }
+    h1{
+        grid-column: 1;
+        grid-row: 1;
+        padding-left: 6px;
+
+        font-style: italic;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        color: rgba(255, 255, 255, 0.932);
+
+        align-self: center;
+    }
+    header * button{
+        height: 30px;
+        width: 60px;
+    
+        font-size: 22px;
+        float:right;
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    
+        justify-items: center;
+        align-items: center;
+    
+        border-radius: 50%;
+    
+        background-image: none;
+        
+        cursor: pointer;
+    }
+    .overlay_container{
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+    
+        justify-items: end;
+        
+        max-height: 520px;
+        width: 325px;
+        overflow-y: auto;
+    
+        border: 2px double rgba(0, 0, 0, 0.842);
+        border-radius: 2%;
+    
+        padding:6px;
+        
+        z-index: 3;
+        
+    }
+    .add_to_cart{
+        margin: -84px 50px;
+        background-color:rgba(0, 0, 0, 0.699);
+        color: rgba(255, 255, 255, 0.904);
+    
+        transition: all .05s ease-in-out;
+        opacity: 1;
+        cursor: pointer;
+    
+        text-decoration: none;
+    
+        height: 20px;
+        width: 80px;
+        border-radius: 50%;
+    
+        text-align: center;
+    
+        z-index: 2;
+    }
+    .image a{
+        font-size: 12px;
+    }
 }
