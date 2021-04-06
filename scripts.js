@@ -188,7 +188,7 @@ document.getElementById('purchase_button').addEventListener('click', function(){
 
     //close the window and give alert
     checkoutToggle.style.display = 'none';
-    alert('Thank you for your order.')
+    alert('Thank you for your order.');
 })
 
 //////////////////////////////////////////////////////////////

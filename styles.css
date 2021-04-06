@@ -136,7 +136,6 @@ main{
 }
 .image img{
     margin-bottom: 14px;
-    max-width: 100%;
 }
 .add_to_cart{
     margin: -83px 10px;
@@ -153,15 +152,10 @@ main{
     width: 160px;
     border-radius: 50%;
 
-    text-align: center;
-
     z-index: 2;
 }
 .add_to_cart:active{
     transform: translateY(1px);
-}
-h3{
-    z-index: 1;
 }
 .image:hover .add_to_cart{
     opacity: .9;
@@ -172,8 +166,6 @@ img:hover{
 
     background-color: rgba(170, 170, 170, 0.541);
     border-radius: 50%;
-
-    z-index: 0;
 }
 
 /* SHOPPING CART OVERLAY */
@@ -187,14 +179,14 @@ aside {
     
 }
 .dropdown{
-    top: 100px;
+    top: 90px;
     position: fixed;
     z-index: 3;
     
 }
 .overlay_container{
     display: grid;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: repeat(4, auto);
     grid-template-columns: 1fr 1fr;
 
     justify-items: end;
@@ -388,7 +380,6 @@ footer{
         background-color:rgba(0, 0, 0, 0.699);
         color: rgba(255, 255, 255, 0.904);
     
-        transition: all .05s ease-in-out;
         opacity: 1;
         cursor: pointer;
     
@@ -469,27 +460,5 @@ footer{
         
         z-index: 3;
         
-    }
-    .add_to_cart{
-        margin: -84px 50px;
-        background-color:rgba(0, 0, 0, 0.699);
-        color: rgba(255, 255, 255, 0.904);
-    
-        transition: all .05s ease-in-out;
-        opacity: 1;
-        cursor: pointer;
-    
-        text-decoration: none;
-    
-        height: 20px;
-        width: 80px;
-        border-radius: 50%;
-    
-        text-align: center;
-    
-        z-index: 2;
-    }
-    .image a{
-        font-size: 12px;
     }
 }
