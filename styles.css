@@ -139,8 +139,8 @@ main{
 }
 .add_to_cart{
     margin: -83px 10px;
-    background-color:rgba(0, 0, 0, 0.925);
-    color: rgba(255, 255, 255, 0.904);
+    background-color:rgba(0, 0, 0, 0.95);
+    color: rgba(255, 255, 255, 1);
 
     transition: all .05s ease-in-out;
     opacity: 0;
@@ -197,7 +197,9 @@ aside {
 
     background-image: url('images/cartgif.gif');
 
-    border: 2px double rgba(0, 0, 0, 0.842);
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2),
+                0 3px 6px rgba(0,0,0,0.4);
     border-radius: 2%;
 
     padding:6px;
@@ -217,6 +219,9 @@ aside {
 
     height: 32px;
     width: 32px;
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2),
+                0 3px 6px rgba(0,0,0,0.4);
 
     border-radius: 10%;
 
@@ -252,6 +257,9 @@ td button{
 
     cursor: pointer;
     border-radius: 10%;
+    
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2),
+                0 3px 6px rgba(0,0,0,0.4);
 }
 .removeth{
     width: 45px;
@@ -259,9 +267,11 @@ td button{
 .xth{
     width: 150px;
     border-bottom: 3px solid black;
+    
 }
 .priceth{
     border-bottom: 3px solid black;
+    
 }
 #clear_cart{
     grid-row: 4;
@@ -270,10 +280,11 @@ td button{
     align-self: center;
     justify-self: start;
 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2),
+                0 3px 6px rgba(0,0,0,0.4);
 
     height: 50px;
     width: 100px;
-    
     font-weight: 700;
 
     background-color:rgba(211, 211, 211, 0.829);
@@ -308,10 +319,14 @@ td button{
 
     cursor: pointer;
     border-radius: 10%;
+
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2),
+                0 3px 6px rgba(0,0,0,0.4);
 }
 #empty_span{
     grid-row: 4;
     grid-column: 1;
+
 }
 .overlay_container button:active{
     transition: all .05s ease-in-out;
